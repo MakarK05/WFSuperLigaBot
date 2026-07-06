@@ -1,5 +1,6 @@
-package com.github.MakarK05.WFSuperLigaBot;
+package com.github.MakarK05.WFSuperLigaBot.bot;
 
+import com.github.MakarK05.WFSuperLigaBot.command.UpdateConsumer;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.longpolling.interfaces.LongPollingUpdateConsumer;
