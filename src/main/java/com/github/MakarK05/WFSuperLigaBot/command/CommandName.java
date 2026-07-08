@@ -6,7 +6,8 @@ package com.github.MakarK05.WFSuperLigaBot.command;
 
 public enum CommandName {
     START("/start"),
-    STOP("/stop");
+    HELP("/help"),
+    NOT_COMMAND("notCommand");
 
     private final String commandName;
 
