@@ -1,5 +1,7 @@
 package com.github.MakarK05.WFSuperLigaBot.service;
 
+import org.springframework.beans.factory.annotation.Value;
+import org.telegram.telegrambots.client.okhttp.OkHttpTelegramClient;
 import org.telegram.telegrambots.longpolling.util.LongPollingSingleThreadUpdateConsumer;
 import org.telegram.telegrambots.meta.generics.TelegramClient;
 
@@ -8,5 +10,6 @@ import org.telegram.telegrambots.meta.generics.TelegramClient;
  */
 
 public interface SendBotMessageService {
-    void sendMessage(TelegramClient telegramClient, Long chatId, String message);
+
+    void sendMessage(Long chatId, String message);
 }
