@@ -3,6 +3,7 @@ package com.github.MakarK05.WFSuperLigaBot;
 import com.github.MakarK05.WFSuperLigaBot.command.Command;
 import com.github.MakarK05.WFSuperLigaBot.service.SendBotMessageImpl;
 import com.github.MakarK05.WFSuperLigaBot.service.SendBotMessageService;
+import com.github.MakarK05.WFSuperLigaBot.service.TelegramUserService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -15,6 +16,7 @@ abstract class AbstractCommandTest {
 
     protected TelegramClient telegramClient = Mockito.mock(TelegramClient.class);
     protected SendBotMessageService sendBotMessageService = new SendBotMessageImpl(telegramClient);
+    protected TelegramUserService telegramUserService = Mockito.mock(TelegramUserService.class);
 
     abstract String getCommandName();
     abstract String getCommandMessage();
