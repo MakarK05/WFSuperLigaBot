@@ -5,6 +5,7 @@ import com.github.MakarK05.WFSuperLigaBot.command.CommandContainer;
 import com.github.MakarK05.WFSuperLigaBot.command.CommandName;
 import com.github.MakarK05.WFSuperLigaBot.command.UnknowCommand;
 import com.github.MakarK05.WFSuperLigaBot.service.SendBotMessageService;
+import com.github.MakarK05.WFSuperLigaBot.service.TelegramUserService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -17,12 +18,14 @@ import java.util.Arrays;
 public class CommandContainerTest {
 
     CommandContainer commandContainer;
+    TelegramUserService telegramUserService;
     SendBotMessageService sendBotMessageService;
 
     @BeforeEach
     public void init(){
         sendBotMessageService = Mockito.mock(SendBotMessageService.class);
-        commandContainer = new CommandContainer(sendBotMessageService);
+        telegramUserService = Mockito.mock(TelegramUserService.class);
+        commandContainer = new CommandContainer(sendBotMessageService, telegramUserService);
 
     }
 
